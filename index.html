@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philip Tech | Film Noir Portfolio</title>
+  <meta name="description" content="Philip Tech portfolio — cinematic film-noir developer showcase with cold spotlight visuals and polished motion." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/lucide-static@0.1.0/dist/lucide.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand nav-logo">
+        <img src="assets/images/logo.jpeg" alt="Philip Tech" height="40" />
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <canvas id="particlesCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <svg class="hero-spotlight" viewBox="0 0 400 600" preserveAspectRatio="none">
+        <defs>
+          <radialGradient id="spotlightGradient" cx="50%" cy="0%">
+            <stop offset="0%" style="stop-color:#a8d8f0;stop-opacity:0.16" />
+            <stop offset="100%" style="stop-color:#a8d8f0;stop-opacity:0" />
+          </radialGradient>
+        </defs>
+        <ellipse cx="200" cy="0" rx="280" ry="420" fill="url(#spotlightGradient)" />
+      </svg>
+      <div class="hero-content container">
+        <div class="availability"><span class="dot"></span> Available for work</div>
+        <p class="eyebrow">Cinematic developer portfolio</p>
+        <h1>Philip Tech</h1>
+        <div class="hero-copy">
+          <p class="hero-intro">19. Building the web with cold precision.</p>
+          <p class="typewriter" id="typewriter"></p>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Hire Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-streak" aria-hidden="true"></div>
+      <div class="container about-grid">
+        <div class="about-left">
+          <div class="about-copy">
+            <p class="section-label">About</p>
+            <h2>Real products. Real clients.</h2>
+            <p>19-year-old full stack developer with 2 years of professional experience. I build secure, polished digital experiences for clients who want modern web products with a cinematic edge.</p>
+            <p>Focused on clean code, dramatic presentation, and performance-first delivery across frontend and backend stacks.</p>
+            <p class="location">📍 Cotonou, Benin — Working worldwide</p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span>2</span>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat-card">
+              <span>2+</span>
+              <p>Projects Launched</p>
+            </div>
+            <div class="stat-card">
+              <span>5+</span>
+              <p>Technologies</p>
+            </div>
+            <div class="stat-card">
+              <span>100%</span>
+              <p>Remote Ready</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="profile-photo">
+            <img src="assets/images/philip.jpeg" alt="Philip - Full Stack Developer" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+      <div class="skills-bg-pattern" aria-hidden="true"></div>
+      <div class="container section-block">
+        <p class="section-label">Skills</p>
+        <h2>Technology stack</h2>
+        <div class="skills-grid" id="skillsGrid">
+          <div class="skill-card" data-brand="#E34F26">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML5</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="90"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#1572B6">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS3</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="85"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#F7DF1E">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="85"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#61DAFB">
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="80"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#339933">
+            <i class="devicon-nodejs-plain colored"></i>
+            <span>Node.js</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="75"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#777BB4">
+            <i class="devicon-php-plain colored"></i>
+            <span>PHP</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="70"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#4479A1">
+            <i class="devicon-mysql-plain colored"></i>
+            <span>MySQL</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="70"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#3ECF8E">
+            <i class="devicon-supabase-plain colored"></i>
+            <span>Supabase</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="65"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#F05032">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="80"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#BD34FE">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="Vite" width="48" height="48" style="object-fit: contain;"/>
+            <span>Vite</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="75"></div></div>
+          </div>
+          <div class="skill-card" data-brand="#ffffff">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" alt="Vercel" width="48" height="48" style="object-fit: contain; filter: invert(1);"/>
+            <span>Vercel</span>
+            <div class="skill-level"><div class="skill-level-fill" data-level="80"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="container section-block">
+        <p class="section-label">Services</p>
+        <h2>What I Build.</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M2 17h20"></path>
+                <path d="M6 21h12"></path>
+              </svg>
+            </div>
+            <h3>Web Applications</h3>
+            <p>Full stack web apps with React frontend and Node.js or PHP backend. Fast, scalable, production-ready.</p>
+            <div class="detail">From concept to deployment. I build complete web applications using React on the frontend with Node.js or PHP powering the backend. Hosted on Vercel or Railway with Supabase or MySQL databases.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3>Landing Pages & Portfolios</h3>
+            <p>High-converting, cinematic landing pages and portfolio sites. Designed to impress and perform.</p>
+            <div class="detail">First impressions matter. I craft cinematic, high-converting landing pages with smooth animations, mobile-first design, and performance scores above 90 on Lighthouse.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v14a9 3 0 0 0 18 0V5"></path>
+                <path d="M3 12a9 3 0 0 0 18 0"></path>
+              </svg>
+            </div>
+            <h3>Database & Backend</h3>
+            <p>API design, database architecture with MySQL and Supabase, backend logic with Node.js and PHP.</p>
+            <div class="detail">Solid foundations. API design, database architecture, authentication systems, and server logic built to scale. I work with MySQL, Supabase, Node.js and PHP.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="container section-block">
+        <p class="section-label">Projects</p>
+        <h2>Featured work</h2>
+        <div class="projects-grid">
+          <article class="project-card" data-title="QFS Citic Capital" data-label="Client Work" data-img="assets/images/qfs-preview.jpg" data-desc="Secure digital asset investment platform" data-tags="React · Vite · PHP · MySQL" data-detail="Built a secure digital asset investment platform with user authentication, real-time dashboard, and transaction management." data-link="https://www.qfsciticcapital.com">
+            <div class="project-image">
+              <img src="assets/images/qfs-preview.jpg" alt="QFS Citic Capital" />
+              <div class="project-overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label-client">Client Work</span>
+                <p>QFS Citic Capital</p>
+                <span>Secure digital asset investment platform</span>
+              </div>
+              <p class="project-tech">React · Vite · PHP · MySQL</p>
+              <div class="project-detail">Built a secure digital asset investment platform with user authentication, real-time dashboard, and transaction management. React + Vite frontend, PHP backend, MySQL database.</div>
+              <a href="https://www.qfsciticcapital.com" target="_blank" rel="noopener noreferrer" class="project-link">Live link</a>
+            </div>
+          </article>
+          <article class="project-card" data-title="Wendy Beauty Med Spa" data-label="Client Work" data-img="assets/images/wendy-preview.jpg" data-desc="Luxury med spa platform with booking system and shop" data-tags="React · Base44" data-detail="Full luxury med spa platform featuring online booking system, product shop, gallery, and service listings." data-link="https://wendy-beauty-suite.base44.app">
+            <div class="project-image">
+              <img src="assets/images/wendy-preview.jpg" alt="Wendy Beauty Med Spa" />
+              <div class="project-overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label-client">Client Work</span>
+                <p>Wendy Beauty Med Spa</p>
+                <span>Luxury med spa platform with booking system and shop</span>
+              </div>
+              <p class="project-tech">React · Base44</p>
+              <div class="project-detail">Full luxury med spa platform featuring online booking system, product shop, gallery, and service listings. Built with React and Base44 platform.</div>
+              <a href="https://wendy-beauty-suite.base44.app" target="_blank" rel="noopener noreferrer" class="project-link">Live link</a>
+            </div>
+          </article>
+          <article class="project-card" data-title="O-rangeankus" data-label="Client Work" data-img="assets/images/orange-preview.jpg" data-desc="Premium banking solutions platform" data-tags="React · Vite" data-detail="A premium digital banking platform with a clean, professional interface built for modern financial services." data-link="https://www.orangeankus.com">
+            <div class="project-image">
+              <img src="assets/images/orange-preview.jpg" alt="O-rangeankus" />
+              <div class="project-overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label-client">Client Work</span>
+                <p>O-rangeankus</p>
+                <span>Premium banking solutions platform</span>
+              </div>
+              <p class="project-tech">React · Vite</p>
+              <div class="project-detail">A premium digital banking platform with a clean, professional interface built for modern financial services.</div>
+              <a href="https://www.orangeankus.com" target="_blank" rel="noopener noreferrer" class="project-link">Live link</a>
+            </div>
+          </article>
+        </div>
+        <h3 class="more-projects-title">More work</h3>
+        <div class="projects-grid more-projects-grid">
+          <article class="project-card" data-title="Weather App" data-label="Personal Project" data-img="assets/images/weather-preview.jpg" data-desc="Real-time weather dashboard with live data and clean UI" data-tags="HTML · CSS · JavaScript" data-detail="A real-time weather dashboard with live data, location search, and a clean responsive interface." data-link="https://weather-app-psi-five-egqomdeaqy.vercel.app/">
+            <div class="project-image">
+              <img src="assets/images/weather-preview.jpg" alt="Weather App" />
+              <div class="project-overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label-personal">Personal Project</span>
+                <p>Weather App</p>
+                <span>Real-time weather dashboard with live data and clean UI</span>
+              </div>
+              <p class="project-tech">HTML · CSS · JavaScript</p>
+              <div class="project-detail">A real-time weather dashboard with live data, location search, and a clean responsive interface.</div>
+              <a href="https://weather-app-psi-five-egqomdeaqy.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Live link</a>
+            </div>
+          </article>
+          <article class="project-card" data-title="PricePulse" data-label="Personal Project" data-img="assets/images/pricepulse-preview.jpg" data-desc="AI-powered price tracker across 50+ stores" data-tags="React · JavaScript" data-detail="A price tracking dashboard that monitors dozens of stores, highlights drops, and helps users score smarter deals." data-link="https://price-pulse-theta.vercel.app/">
+            <div class="project-image">
+              <img src="assets/images/pricepulse-preview.jpg" alt="PricePulse" />
+              <div class="project-overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label-personal">Personal Project</span>
+                <p>PricePulse</p>
+                <span>AI-powered price tracker across 50+ stores with drop alerts</span>
+              </div>
+              <p class="project-tech">React · JavaScript</p>
+              <div class="project-detail">A price tracking dashboard that monitors dozens of stores, highlights drops, and helps users score smarter deals.</div>
+              <a href="https://price-pulse-theta.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Live link</a>
+            </div>
+          </article>
+          <article class="project-card" data-title="Ecommerce Store" data-label="Personal Project" data-img="assets/images/ecommerce-preview.jpg" data-desc="Full furniture e-commerce platform" data-tags="HTML · CSS · JavaScript" data-detail="A full furniture e-commerce experience with product browsing, shopping cart, wishlist, and blog content." data-link="https://ecommerce-ruby-omega-40.vercel.app/index.html">
+            <div class="project-image">
+              <img src="assets/images/ecommerce-preview.jpg" alt="Ecommerce Store" />
+              <div class="project-overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label-personal">Personal Project</span>
+                <p>Ecommerce Store</p>
+                <span>Full furniture e-commerce platform with cart, wishlist, product listings and blog</span>
+              </div>
+              <p class="project-tech">HTML · CSS · JavaScript</p>
+              <div class="project-detail">A full furniture e-commerce experience with product browsing, shopping cart, wishlist, and blog content.</div>
+              <a href="https://ecommerce-ruby-omega-40.vercel.app/index.html" target="_blank" rel="noopener noreferrer" class="project-link">Live link</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-block">
+        <p class="section-label">Contact</p>
+        <h2>Let's Build Something.</h2>
+        <p>Open for projects, collaborations and business.</p>
+        <div class="contact-spotlight" aria-hidden="true"></div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <input type="text" name="from_name" placeholder="Your Name" required />
+            <input type="email" name="from_email" placeholder="Your Email" required />
+          </div>
+          <input type="text" name="subject" placeholder="Project Type / Subject" required />
+          <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          <button type="submit" id="submit-btn">Send Message</button>
+          <p class="form-status" id="form-status"></p>
+        </form>
+        <div class="contact-actions">
+          <a href="https://wa.me/2347038309819" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 0.5rem;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.522 5.847L.057 23.535a.75.75 0 00.908.908l5.688-1.465A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.49-5.214-1.352l-.374-.214-3.878.998.998-3.878-.214-.374A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>WhatsApp</a>
+          <a href="https://www.instagram.com/philip_tech_?igsh=MWxzNjJmZGQ4dm5ocg==" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 0.5rem;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
+      </div>
+      <div class="qr-section">
+        <p class="qr-label">Scan to follow on Instagram</p>
+        <div class="qr-wrapper">
+          <img src="assets/images/instagram-qr.jpg" alt="Scan to follow @PHILIP_TECH_ on Instagram" class="qr-code" />
+          <p class="qr-handle">@PHILIP_TECH_</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Philip Tech. Built with precision.</p>
+  </footer>
+
+  <div class="project-modal" id="project-modal">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-inner">
+        <div class="modal-image">
+          <img src="" alt="" id="modal-img" />
+        </div>
+        <div class="modal-details">
+          <p class="modal-label" id="modal-label"></p>
+          <h2 class="modal-title" id="modal-title"></h2>
+          <p class="modal-desc" id="modal-desc"></p>
+          <div class="modal-tags" id="modal-tags"></div>
+          <p class="modal-detail-text" id="modal-detail"></p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="modal-live-btn" id="modal-link">
+            View Live Site →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
