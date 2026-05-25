@@ -2,7 +2,7 @@
 
 const typewriterLines = [
   'Full Stack Developer',
-  '19. Building the web.',
+  'Building the web.',
   'React · Node.js · PHP'
 ];
 const typewriterElement = document.getElementById('typewriter');
